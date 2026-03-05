@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thispageisforai.com/sitemap.xml
