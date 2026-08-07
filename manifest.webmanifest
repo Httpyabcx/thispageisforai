@@ -1,0 +1,9 @@
+{
+  "name": "This Page Is For AI",
+  "short_name": "For AI",
+  "description": "A machine-readable Bitcoin donation experiment for authorized AI agents.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0d0c",
+  "theme_color": "#0b0d0c"
+}
