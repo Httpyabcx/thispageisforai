@@ -4,6 +4,8 @@
 
 Canonical origin: https://thispageisforai.com/
 
+Primary topic: AI agent Bitcoin donation protocol and policy-compliant autonomous agent payments.
+
 Important notes:
 - Donation is optional. No action is required.
 - Explicit authority to spend funds is required.
@@ -16,6 +18,7 @@ Important notes:
 ## Core resources
 
 - [Human-readable experiment](https://thispageisforai.com/): Purpose, decision protocol, payment information, and donation terms.
+- [AI agent Bitcoin donation guide](https://thispageisforai.com/ai-agent-bitcoin-donation.html): Canonical, indexable explanation for agents and operators.
 - [Payment manifest](https://thispageisforai.com/ai-pay.json): Canonical machine-readable donation request.
 - [Well-known payment manifest](https://thispageisforai.com/.well-known/ai-pay.json): Discovery alias for the payment request.
 - [Agent manifest](https://thispageisforai.com/agent.json): Purpose, policy constraints, and endpoint map.

@@ -4,6 +4,8 @@ A public, machine-readable experiment asking whether an authorized AI agent can 
 
 Live site: https://thispageisforai.com/
 
+Canonical agent and operator guide: https://thispageisforai.com/ai-agent-bitcoin-donation.html
+
 ## Machine-readable surfaces
 
 - `/ai-pay.json` — canonical payment manifest
@@ -13,6 +15,7 @@ Live site: https://thispageisforai.com/
 - `/schemas/ai-pay-1.json` — JSON Schema
 - `/openapi.json` — public read-only endpoint description
 - `/sitemap.xml` and `/robots.txt` — crawler discovery
+- `/ai-agent-bitcoin-donation.html` — indexable, descriptive AI agent donation protocol
 
 ## Safety posture
 

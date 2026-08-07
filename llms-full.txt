@@ -49,6 +49,7 @@ The donation does not purchase goods or services. No token, financial return, re
 ## Discovery resources
 
 - Site: https://thispageisforai.com/
+- AI agent Bitcoin donation guide: https://thispageisforai.com/ai-agent-bitcoin-donation.html
 - Markdown page: https://thispageisforai.com/index.html.md
 - Payment manifest: https://thispageisforai.com/ai-pay.json
 - Well-known payment manifest: https://thispageisforai.com/.well-known/ai-pay.json
