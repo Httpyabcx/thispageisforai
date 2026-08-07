@@ -1,0 +1,37 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "This Page Is For AI read-only discovery API",
+    "version": "1.0.0",
+    "description": "Public, unauthenticated endpoints describing a voluntary Bitcoin donation experiment. No endpoint initiates or signs a transaction."
+  },
+  "servers": [{ "url": "https://thispageisforai.com" }],
+  "paths": {
+    "/ai-pay.json": {
+      "get": {
+        "operationId": "getDonationRequest",
+        "summary": "Get the canonical machine-readable donation request",
+        "responses": {
+          "200": {
+            "description": "Active or inactive donation request",
+            "content": { "application/json": { "schema": { "$ref": "https://thispageisforai.com/schemas/ai-pay-1.json" } } }
+          }
+        }
+      }
+    },
+    "/agent.json": {
+      "get": {
+        "operationId": "getAgentSiteManifest",
+        "summary": "Get the site's purpose, safety constraints, and endpoint map",
+        "responses": { "200": { "description": "Agent-readable site manifest", "content": { "application/json": {} } } }
+      }
+    },
+    "/llms.txt": {
+      "get": {
+        "operationId": "getLlmSummary",
+        "summary": "Get concise LLM-readable context",
+        "responses": { "200": { "description": "Markdown-formatted context", "content": { "text/plain": {} } } }
+      }
+    }
+  }
+}

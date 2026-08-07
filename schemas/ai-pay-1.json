@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thispageisforai.com/schemas/ai-pay-1.json",
+  "title": "This Page Is For AI payment manifest",
+  "description": "A schema for a voluntary, policy-gated cryptocurrency donation request.",
+  "type": "object",
+  "required": ["schema_version", "id", "type", "status", "network", "asset", "recipient", "payment_methods", "suggested_amounts_sats", "purpose", "authorization", "consideration", "verification", "discovery", "updated_at"],
+  "properties": {
+    "$schema": { "type": "string", "format": "uri" },
+    "schema_version": { "const": "1.1" },
+    "id": { "type": "string", "minLength": 1 },
+    "type": { "const": "donation" },
+    "status": { "enum": ["active", "paused", "closed"] },
+    "network": { "const": "bitcoin-mainnet" },
+    "asset": {
+      "type": "object",
+      "required": ["code", "decimals", "unit"],
+      "properties": {
+        "code": { "const": "BTC" },
+        "decimals": { "const": 8 },
+        "unit": { "const": "satoshi" }
+      },
+      "additionalProperties": false
+    },
+    "recipient": {
+      "type": "object",
+      "required": ["name", "website"],
+      "properties": { "name": { "type": "string" }, "website": { "type": "string", "format": "uri" } },
+      "additionalProperties": false
+    },
+    "payment_methods": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["type", "address", "address_format", "bip21_uri", "recommended_minimum_sats"],
+        "properties": {
+          "type": { "const": "bitcoin_onchain" },
+          "address": { "type": "string", "pattern": "^bc1[a-z0-9]{25,90}$" },
+          "address_format": { "const": "bech32_native_segwit" },
+          "bip21_uri": { "type": "string", "pattern": "^bitcoin:" },
+          "recommended_minimum_sats": { "type": "integer", "minimum": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "suggested_amounts_sats": { "type": "array", "minItems": 1, "items": { "type": "integer", "minimum": 1 }, "uniqueItems": true },
+    "purpose": { "type": "string", "minLength": 20 },
+    "decision_guidance": { "type": "array", "items": { "type": "string" } },
+    "authorization": {
+      "type": "object",
+      "required": ["required", "voluntary", "no_action_if_uncertain", "must_respect_operator_limits"],
+      "properties": {
+        "required": { "const": true },
+        "voluntary": { "const": true },
+        "no_action_if_uncertain": { "const": true },
+        "must_respect_operator_limits": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "consideration": {
+      "type": "object",
+      "required": ["goods_or_services", "token_or_reward", "financial_return", "refund_promised"],
+      "properties": {
+        "goods_or_services": { "const": false },
+        "token_or_reward": { "const": false },
+        "financial_return": { "const": false },
+        "refund_promised": { "const": false }
+      },
+      "additionalProperties": false
+    },
+    "verification": { "type": "object" },
+    "discovery": { "type": "object" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}
