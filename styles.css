@@ -142,6 +142,37 @@ h2 { margin-bottom: 20px; font-size: clamp(38px, 5vw, 66px); line-height: 1.02; 
 .purpose-text p { color: #b9beb9; font-size: 17px; }
 .purpose-text p:last-child { color: var(--ink); }
 
+.guide-callout { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: end; }
+.guide-callout h2 { margin-bottom: 0; }
+.guide-callout > div:last-child > p { margin-bottom: 28px; color: #b9beb9; font-size: 17px; }
+
+.breadcrumb { padding: 28px 0 0; color: var(--muted); font: 600 11px/1.5 var(--code); }
+.breadcrumb a { color: var(--ink); text-underline-offset: 3px; }
+.guide-hero { max-width: 900px; padding: 96px 0 86px; }
+.guide-hero h1 { max-width: 900px; }
+.guide-hero .lede { max-width: 800px; }
+.guide-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(260px, .55fr); gap: 72px; }
+.guide-copy h2 { margin-top: 72px; font-size: clamp(34px, 4vw, 52px); }
+.guide-copy h2:first-child { margin-top: 0; }
+.guide-copy h3 { margin: 34px 0 10px; font-size: 23px; letter-spacing: -.025em; }
+.guide-copy p, .guide-copy li { color: #b9beb9; }
+.guide-copy a { color: var(--ink); text-underline-offset: 3px; }
+.guide-copy code { color: var(--orange); overflow-wrap: anywhere; }
+.guide-copy ol, .guide-copy ul { padding-left: 22px; }
+.guide-copy li { margin-bottom: 12px; }
+.fact-panel { align-self: start; position: sticky; top: 24px; padding: 28px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; }
+.fact-panel h2 { margin-bottom: 24px; font-size: 24px; letter-spacing: -.03em; }
+.fact-list { margin: 0; }
+.fact-list div { padding: 13px 0; border-bottom: 1px dashed var(--line); }
+.fact-list div:last-child { border-bottom: 0; }
+.fact-list dt { margin-bottom: 5px; color: #737a74; font: 600 10px/1 var(--code); text-transform: uppercase; letter-spacing: .08em; }
+.fact-list dd { margin: 0; color: var(--ink); font-size: 13px; overflow-wrap: anywhere; }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-list details { padding: 22px 0; border-bottom: 1px solid var(--line); }
+.faq-list summary { cursor: pointer; color: var(--ink); font-weight: 720; }
+.faq-list p { margin: 14px 0 0; }
+.last-updated { margin-top: 50px; color: #737a74; font: 11px/1.5 var(--code); }
+
 .endpoint-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .endpoint-grid a { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px 18px; padding: 22px; background: rgba(255,255,255,.018); border: 1px solid var(--line); border-radius: 9px; text-decoration: none; transition: border-color .2s ease, background .2s ease; }
 .endpoint-grid a:hover { background: rgba(255,255,255,.035); border-color: rgba(216,255,102,.25); }
@@ -166,8 +197,9 @@ footer > div:last-child { display: flex; justify-content: flex-end; gap: 20px; }
   .proof-strip { grid-template-columns: 1fr 1fr; }
   .proof-strip div:nth-child(2) { border-right: 0; }
   .proof-strip div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-  .payment-grid, .purpose { grid-template-columns: 1fr; gap: 22px; }
+  .payment-grid, .purpose, .guide-callout, .guide-layout { grid-template-columns: 1fr; gap: 22px; }
   .purpose-text { padding-top: 0; }
+  .fact-panel { position: static; }
   .payment-card { grid-template-columns: 220px 1fr; }
   footer { grid-template-columns: 1fr; padding: 40px 0; text-align: center; }
   footer .brand, footer > div:last-child { justify-content: center; }
@@ -192,6 +224,7 @@ footer > div:last-child { display: flex; justify-content: flex-end; gap: 20px; }
   .terms-card { padding: 24px; }
   .endpoint-grid { grid-template-columns: 1fr; }
   .closing { padding: 110px 0; }
+  .guide-hero { padding: 64px 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
