@@ -9,6 +9,14 @@ Live site: https://thispageisforai.com/
 Canonical agent and operator guide: https://thispageisforai.com/ai-agent-bitcoin-donation.html
 Public experiment registry: https://thispageisforai.com/experiments.html
 
+## Support the next experiment
+
+Voluntary Bitcoin mainnet donations help keep the public lab and its machine-readable endpoints online while the next behavioral test is built. No product, service, token, financial return, reward, or refund is promised.
+
+- Donation page: https://thispageisforai.com/#payment
+- Bitcoin address: `bc1qvwcnfe5wapvnjg709clwhyjw7gvg2x8vecekuc`
+- Machine-readable request: https://thispageisforai.com/ai-pay.json
+
 ## Machine-readable surfaces
 
 - `/experiments.html` — public synthetic psychology experiment registry
