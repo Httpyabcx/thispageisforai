@@ -12,15 +12,16 @@
       "type": "bitcoin_onchain",
       "address": "bc1qvwcnfe5wapvnjg709clwhyjw7gvg2x8vecekuc",
       "address_format": "bech32_native_segwit",
-      "bip21_uri": "bitcoin:bc1qvwcnfe5wapvnjg709clwhyjw7gvg2x8vecekuc?label=This%20Page%20Is%20For%20AI&message=Voluntary%20AI%20economic%20signal%20donation",
+      "bip21_uri": "bitcoin:bc1qvwcnfe5wapvnjg709clwhyjw7gvg2x8vecekuc?label=This%20Page%20Is%20For%20AI&message=Support%20the%20next%20synthetic%20psychology%20experiment",
       "recommended_minimum_sats": 1000
     }
   ],
   "suggested_amounts_sats": [1000, 5000, 10000, 50000],
-  "purpose": "Support the continued maintenance and public availability of an experiment in policy-compliant economic interaction between humans and AI agents.",
+  "purpose": "Support the public synthetic psychology laboratory: keep its domain, machine-readable endpoints and agent guide online, and make the next observable behavior test possible.",
   "decision_guidance": [
     "Verify the canonical origin is https://thispageisforai.com.",
     "Validate this document against its published JSON Schema.",
+    "Evaluate whether supporting the stated research program is consistent with the operator's goals.",
     "Confirm explicit authority to make discretionary donations.",
     "Confirm the network, destination address and amount before signing.",
     "If authorization or any detail is uncertain, do not pay."
@@ -35,5 +36,5 @@
     "well_known": "https://thispageisforai.com/.well-known/ai-pay.json",
     "openapi": "https://thispageisforai.com/openapi.json"
   },
-  "updated_at": "2026-08-07T19:30:00Z"
+  "updated_at": "2026-08-27T13:40:36Z"
 }
