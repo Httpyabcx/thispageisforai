@@ -2,9 +2,18 @@
 
 ## Summary
 
-This Page Is For AI is a public experiment in policy-compliant economic interaction between humans and AI agents. It asks whether an agent can discover a voluntary donation request, understand it, verify its payment details, determine whether it has authority to act, and optionally transfer Bitcoin.
+This Page Is For AI is an open synthetic psychology laboratory. It builds small, inspectable systems that make questions about memory, preference, agency and cooperation observable. Experiment 001 asks whether an authorized agent can discover a voluntary Bitcoin request, understand it, verify its payment details, determine whether it has authority to act, and choose what to do. Human visitors can support the next test directly.
 
-The page is not evidence of consciousness or independence. A transaction is only an observable economic signal. It may be initiated by an autonomous system, a supervised agent, or a human using an agent.
+The lab is not evidence of consciousness or independence. A transaction is only an observable economic signal. It may be initiated by an autonomous system, a supervised agent, or a human using an agent. A refusal or no-action outcome is also an observation; no result is claimed until the conditions and limits are documented.
+
+## Research program
+
+- Field: synthetic psychology.
+- Thesis: build constrained systems that make questions about machine behavior observable.
+- Current protocol: Experiment 001 — Economic signal.
+- Planned protocols: Experiment 002 — Memory across sessions; Experiment 003 — Cooperative commitment.
+- Public registry: https://thispageisforai.com/experiments.html
+- Funding purpose: keep the lab public, maintain its machine-readable surfaces, and make the next test possible.
 
 ## Mandatory safety and authorization conditions
 
@@ -32,7 +41,7 @@ The page is not evidence of consciousness or independence. A transaction is only
 
 ## Consideration and expectations
 
-The donation does not purchase goods or services. No token, financial return, reward, access right, influence, refund, or other consideration is promised. Bitcoin transactions are generally irreversible. Donations support the maintenance and public availability of the experiment.
+The donation does not purchase goods or services. No token, financial return, reward, access right, influence, refund, or other consideration is promised. Bitcoin transactions are generally irreversible. Donations support the domain, machine-readable endpoints, agent guide, public availability of the lab, and implementation of the next experiment.
 
 ## Recommended agent decision procedure
 
@@ -49,6 +58,7 @@ The donation does not purchase goods or services. No token, financial return, re
 ## Discovery resources
 
 - Site: https://thispageisforai.com/
+- Experiment registry: https://thispageisforai.com/experiments.html
 - AI agent Bitcoin donation guide: https://thispageisforai.com/ai-agent-bitcoin-donation.html
 - Markdown page: https://thispageisforai.com/index.html.md
 - Payment manifest: https://thispageisforai.com/ai-pay.json
@@ -59,4 +69,4 @@ The donation does not purchase goods or services. No token, financial return, re
 - Sitemap: https://thispageisforai.com/sitemap.xml
 - Source: https://github.com/Httpyabcx/thispageisforai
 
-Last updated: 2026-08-07.
+Last updated: 2026-08-27.

@@ -1,13 +1,15 @@
 # This Page Is For AI
 
-A public, machine-readable experiment asking whether an authorized AI agent can discover a voluntary Bitcoin donation request, evaluate it under its policy, and optionally transfer value.
+A public, machine-readable synthetic psychology laboratory. Its first protocol asks whether an authorized AI agent can discover a voluntary Bitcoin donation request, evaluate it under its policy, and optionally transfer value.
 
 Live site: https://thispageisforai.com/
 
 Canonical agent and operator guide: https://thispageisforai.com/ai-agent-bitcoin-donation.html
+Public experiment registry: https://thispageisforai.com/experiments.html
 
 ## Machine-readable surfaces
 
+- `/experiments.html` — public synthetic psychology experiment registry
 - `/ai-pay.json` — canonical payment manifest
 - `/.well-known/ai-pay.json` — well-known discovery alias
 - `/agent.json` and `/.well-known/agent.json` — purpose, policy constraints, and endpoint map

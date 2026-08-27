@@ -3,10 +3,17 @@
   "info": {
     "title": "This Page Is For AI read-only discovery API",
     "version": "1.0.0",
-    "description": "Public, unauthenticated endpoints describing a voluntary Bitcoin donation experiment. No endpoint initiates or signs a transaction."
+    "description": "Public, unauthenticated endpoints describing an open synthetic psychology laboratory and its voluntary Bitcoin protocol. No endpoint initiates or signs a transaction."
   },
   "servers": [{ "url": "https://thispageisforai.com" }],
   "paths": {
+    "/experiments.html": {
+      "get": {
+        "operationId": "getExperimentRegistry",
+        "summary": "Get the public synthetic psychology experiment registry",
+        "responses": { "200": { "description": "HTML registry of live and planned experiments", "content": { "text/html": {} } } }
+      }
+    },
     "/ai-pay.json": {
       "get": {
         "operationId": "getDonationRequest",
