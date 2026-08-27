@@ -34,10 +34,22 @@
     "success_definition": "A check passes only when required routes return expected content and the canonical machine-readable documents agree."
   },
   "consultation": {
-    "status": "not_measured",
+    "status": "browser_measurement_enabled",
     "count_claimed": false,
-    "reason": "GitHub Pages serves static files and this site does not expose visitor logs.",
+    "reason": "Aggregate browser measurement is enabled, but no numeric report has been published. GitHub Pages still does not expose request logs for direct agent requests.",
     "measurement_policy": "https://thispageisforai.com/privacy.html",
-    "future_measurement": "Add privacy-preserving analytics or access-log measurement only after the provider, consent, retention and bot-separation rules are documented on the public policy page."
+    "human_measurement": {
+      "provider": "Cloudflare Web Analytics",
+      "script_origin": "https://static.cloudflareinsights.com/beacon.min.js",
+      "purpose": "Aggregate browser page views and visits for this hostname.",
+      "scope": "Browser measurement only; it does not prove a unique human, attention or understanding.",
+      "personal_data": "The provider states that Web Analytics does not collect or use visitors' personal data.",
+      "retention": "This site stores no copy of dashboard records; provider retention follows the provider's current service policy."
+    },
+    "agent_requests": {
+      "status": "not_measured",
+      "reason": "Static GitHub Pages does not expose request logs through this site."
+    },
+    "future_measurement": "Add access-log measurement only after a log-capable edge or host and the bot-separation rules are documented on the public policy page."
   }
 }
