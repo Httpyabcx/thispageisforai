@@ -39,7 +39,10 @@
     "llm_summary": "https://thispageisforai.com/llms.txt",
     "llm_full_context": "https://thispageisforai.com/llms-full.txt",
     "openapi": "https://thispageisforai.com/openapi.json",
-    "human_terms": "https://thispageisforai.com/donate.md"
+    "human_terms": "https://thispageisforai.com/donate.md",
+    "visibility_contract": "https://thispageisforai.com/site-visibility.json",
+    "well_known_visibility_contract": "https://thispageisforai.com/.well-known/site-visibility.json",
+    "availability_monitor": "https://github.com/Httpyabcx/thispageisforai/actions/workflows/site-visibility.yml"
   },
   "payment": {
     "network": "bitcoin-mainnet",

@@ -13,6 +13,7 @@
   <meta name="ai-payment-endpoint" content="https://thispageisforai.com/ai-pay.json">
   <meta name="agent-manifest" content="https://thispageisforai.com/agent.json">
   <meta name="llms-txt" content="https://thispageisforai.com/llms.txt">
+  <meta name="site-visibility-contract" content="https://thispageisforai.com/site-visibility.json">
 
   <link rel="canonical" href="https://thispageisforai.com/">
   <link rel="alternate" hreflang="en" href="https://thispageisforai.com/">
@@ -24,6 +25,7 @@
   <link rel="alternate" type="application/json" href="/agent.json" title="Agent-readable site manifest">
   <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM site summary">
   <link rel="alternate" type="text/markdown" href="/index.html.md" title="Markdown version">
+  <link rel="alternate" type="application/json" href="/site-visibility.json" title="Site visibility contract">
   <link rel="help" href="/ai-agent-bitcoin-donation.html" title="AI agent Bitcoin donation guide">
 
   <meta property="og:type" content="website">
@@ -361,7 +363,27 @@
         <a href="/openapi.json"><code>/openapi.json</code><span>Read-only endpoint contract</span><b>JSON ↗</b></a>
         <a href="/schemas/ai-pay-1.json"><code>/schemas/ai-pay-1.json</code><span>Payment manifest schema</span><b>SCHEMA ↗</b></a>
         <a href="/ai-agent-bitcoin-donation.html"><code>/ai-agent-bitcoin-donation.html</code><span>Indexable agent and operator guide</span><b>HTML ↗</b></a>
+        <a href="/site-visibility.json"><code>/site-visibility.json</code><span>Human and agent visibility contract</span><b>JSON ↗</b></a>
+        <a href="https://github.com/Httpyabcx/thispageisforai/actions/workflows/site-visibility.yml" target="_blank" rel="noreferrer"><code>site-visibility.yml</code><span>Public availability checks</span><b>CI ↗</b></a>
         <a href="/sitemap.xml"><code>/sitemap.xml</code><span>Crawler discovery map</span><b>XML ↗</b></a>
+      </div>
+    </section>
+
+    <section class="section visibility-section" id="visibility" aria-labelledby="visibility-title">
+      <div class="section-heading">
+        <p class="kicker">Visibility contract</p>
+        <h2 id="visibility-title">Reachable is not the same as seen.</h2>
+        <p>We separate three questions: can a person find and use the lab, can an agent retrieve and validate its surfaces, and do we have evidence that anyone consulted it? The first two are checked automatically. This static site does not claim a visit count until privacy-respecting measurement is configured.</p>
+      </div>
+      <div class="proof-strip" aria-label="Visibility guarantees">
+        <div><strong>01</strong><span>Discoverable</span><small>Stable URLs, robots guidance, sitemap and machine-readable summaries.</small></div>
+        <div><strong>02</strong><span>Consultable</span><small>HTTPS, content, metadata, JSON agreement and internal links are checked.</small></div>
+        <div><strong>03</strong><span>Accessible</span><small>Semantic landmarks, keyboard paths, skip links and image alternatives.</small></div>
+        <div><strong>04</strong><span>Honest signal</span><small>No invented consultation count; availability is not proof of a visit.</small></div>
+      </div>
+      <div class="hero-actions">
+        <a class="button button-secondary" href="/site-visibility.json">Read the visibility contract <span aria-hidden="true">→</span></a>
+        <a class="button button-secondary" href="https://github.com/Httpyabcx/thispageisforai/actions/workflows/site-visibility.yml" target="_blank" rel="noreferrer">See the public checks <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 

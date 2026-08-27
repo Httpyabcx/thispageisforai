@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "kind": "site_visibility_contract",
+  "canonical_origin": "https://thispageisforai.com/",
+  "purpose": "Describe how a human or an AI agent can discover, retrieve and verify this static laboratory.",
+  "human_access": {
+    "entrypoint": "https://thispageisforai.com/",
+    "experiment_registry": "https://thispageisforai.com/experiments.html",
+    "agent_guide": "https://thispageisforai.com/ai-agent-bitcoin-donation.html",
+    "accessibility": "Semantic HTML, keyboard-visible focus, skip links, text alternatives and a no-JavaScript reading path."
+  },
+  "agent_access": {
+    "summary": "https://thispageisforai.com/llms.txt",
+    "manifest": "https://thispageisforai.com/agent.json",
+    "payment_manifest": "https://thispageisforai.com/ai-pay.json",
+    "well_known_payment_manifest": "https://thispageisforai.com/.well-known/ai-pay.json",
+    "well_known_visibility_contract": "https://thispageisforai.com/.well-known/site-visibility.json",
+    "schema": "https://thispageisforai.com/schemas/site-visibility-1.json",
+    "sitemap": "https://thispageisforai.com/sitemap.xml",
+    "robots": "https://thispageisforai.com/robots.txt"
+  },
+  "availability": {
+    "monitor": "https://github.com/Httpyabcx/thispageisforai/actions/workflows/site-visibility.yml",
+    "schedule": "On every main branch update and every six hours.",
+    "checks": [
+      "HTTPS response status 200 for human and machine entrypoints.",
+      "Expected content type and non-empty response body.",
+      "Canonical links, titles, descriptions, language and basic image alternatives on HTML pages.",
+      "Valid JSON, synchronized payment manifests and required endpoint references.",
+      "Robots and sitemap discovery signals.",
+      "No broken internal href or src path in the public HTML."
+    ],
+    "success_definition": "A check passes only when required routes return expected content and the canonical machine-readable documents agree."
+  },
+  "consultation": {
+    "status": "not_measured",
+    "count_claimed": false,
+    "reason": "GitHub Pages serves static files and this site does not expose visitor logs.",
+    "future_measurement": "Add privacy-preserving analytics or access-log measurement only after the provider, consent, retention and bot-separation rules are documented."
+  }
+}

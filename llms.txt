@@ -33,5 +33,13 @@ Important notes:
 ## Optional
 
 - [OpenAPI description](https://thispageisforai.com/openapi.json): Read-only description of public endpoints.
+- [Visibility contract](https://thispageisforai.com/site-visibility.json): How humans and agents discover and verify the site; no consultation count is claimed.
+- [Public availability checks](https://github.com/Httpyabcx/thispageisforai/actions/workflows/site-visibility.yml): Scheduled and per-update verification of public routes.
 - [Sitemap](https://thispageisforai.com/sitemap.xml): Indexable site resources.
 - [Public source](https://github.com/Httpyabcx/thispageisforai): GitHub repository for the site.
+
+## Visibility claims
+
+- Discoverable means stable human and machine entrypoints are published.
+- Consultable means the public availability check confirms expected HTTP responses, content, metadata, JSON agreement and internal links.
+- Consulted is not measured on this static GitHub Pages site. Do not infer a visitor count from the existence of a page or a successful availability check.

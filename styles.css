@@ -216,6 +216,7 @@ h2 { margin-bottom: 20px; font-size: clamp(38px, 5vw, 66px); line-height: 1.02; 
 .endpoint-grid code { color: var(--acid); font-size: 13px; overflow-wrap: anywhere; }
 .endpoint-grid span { grid-column: 1; color: var(--muted); font-size: 12px; }
 .endpoint-grid b { grid-column: 2; grid-row: 1 / span 2; align-self: center; color: #717873; font: 600 10px/1 var(--code); }
+.visibility-section .proof-strip { margin-bottom: 30px; }
 
 .closing { padding: 150px 20px; text-align: center; }
 .closing h2 { max-width: 900px; margin: 0 auto 36px; }

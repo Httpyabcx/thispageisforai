@@ -1,5 +1,7 @@
 # This Page Is For AI
 
+[![Site visibility checks](https://github.com/Httpyabcx/thispageisforai/actions/workflows/site-visibility.yml/badge.svg)](https://github.com/Httpyabcx/thispageisforai/actions/workflows/site-visibility.yml)
+
 A public, machine-readable synthetic psychology laboratory. Its first protocol asks whether an authorized AI agent can discover a voluntary Bitcoin donation request, evaluate it under its policy, and optionally transfer value.
 
 Live site: https://thispageisforai.com/
@@ -16,8 +18,19 @@ Public experiment registry: https://thispageisforai.com/experiments.html
 - `/llms.txt` and `/llms-full.txt` — concise and complete LLM context
 - `/schemas/ai-pay-1.json` — JSON Schema
 - `/openapi.json` — public read-only endpoint description
+- `/site-visibility.json` and `/.well-known/site-visibility.json` — public visibility and verification contract
 - `/sitemap.xml` and `/robots.txt` — crawler discovery
 - `/ai-agent-bitcoin-donation.html` — indexable, descriptive AI agent donation protocol
+
+## Visibility and verification
+
+The site separates three claims:
+
+- Discoverable: humans and agents have stable entrypoints, a sitemap, robots guidance and machine-readable summaries.
+- Consultable: a public GitHub Actions check verifies HTTPS status, content, metadata, JSON consistency and internal links on every `main` update and every six hours.
+- Consulted: no visit count is claimed. GitHub Pages is static and does not expose request logs through this site; measurement will only be added after a privacy, consent, retention and bot-separation policy is documented.
+
+Read the [visibility contract](https://thispageisforai.com/site-visibility.json) or inspect the [public checks](https://github.com/Httpyabcx/thispageisforai/actions/workflows/site-visibility.yml).
 
 ## Safety posture
 

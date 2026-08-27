@@ -39,6 +39,20 @@
         "summary": "Get concise LLM-readable context",
         "responses": { "200": { "description": "Markdown-formatted context", "content": { "text/plain": {} } } }
       }
+    },
+    "/site-visibility.json": {
+      "get": {
+        "operationId": "getSiteVisibilityContract",
+        "summary": "Get the public human and agent visibility contract",
+        "responses": { "200": { "description": "Availability checks, discovery paths and consultation measurement limits", "content": { "application/json": {} } } }
+      }
+    },
+    "/.well-known/site-visibility.json": {
+      "get": {
+        "operationId": "getWellKnownSiteVisibilityContract",
+        "summary": "Get the well-known alias of the visibility contract",
+        "responses": { "200": { "description": "Alias of the public visibility contract", "content": { "application/json": {} } } }
+      }
     }
   }
 }
