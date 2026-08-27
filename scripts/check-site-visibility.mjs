@@ -65,7 +65,7 @@ async function waitForLiveDeployment() {
         headers: { "user-agent": "thispageisforai-site-check/1.0" }
       });
       const marker = await response.text();
-      if (response.status === 200 && marker.includes("Measurement is not configured")) return;
+      if (response.status === 200 && marker.includes("Cloudflare Web Analytics is enabled")) return;
     } catch {
       // The route may be briefly unavailable while the static deployment rolls out.
     }
@@ -153,8 +153,12 @@ assert(homepage.includes("site-visibility.json"), "Homepage does not expose the 
 assert(homepage.includes("privacy.html"), "Homepage does not expose the privacy and measurement policy");
 
 const privacy = bodyText(loaded.get("/privacy.html"));
-assert(privacy.includes("Measurement is not configured"), "Privacy page does not state the current measurement status");
+assert(privacy.includes("Cloudflare Web Analytics is enabled"), "Privacy page does not state the current measurement status");
 assert(privacy.includes("availability check"), "Privacy page does not distinguish availability from consultation");
+assert(privacy.includes("Agent request"), "Privacy page does not distinguish agent requests");
+for (const route of htmlRoutes) {
+  assert(bodyText(loaded.get(route)).includes("static.cloudflareinsights.com/beacon.min.js"), `${route} is missing the browser measurement beacon`);
+}
 
 const robots = bodyText(loaded.get("/robots.txt"));
 assert(/User-agent: \*/i.test(robots) && /Allow: \/\s*$/im.test(robots), "robots.txt does not allow the public site");
@@ -183,7 +187,9 @@ const visibility = parsed("/site-visibility.json");
 const wellKnownVisibility = parsed("/.well-known/site-visibility.json");
 assert(JSON.stringify(visibility) === JSON.stringify(wellKnownVisibility), "Visibility contracts are not synchronized");
 assert(visibility?.kind === "site_visibility_contract", "Visibility contract has the wrong kind");
-assert(visibility?.consultation?.status === "not_measured" && visibility?.consultation?.count_claimed === false, "Visibility contract makes an unsupported consultation claim");
+assert(visibility?.consultation?.status === "browser_measurement_enabled" && visibility?.consultation?.count_claimed === false, "Visibility contract makes an unsupported consultation claim");
+assert(visibility?.consultation?.human_measurement?.provider === "Cloudflare Web Analytics", "Visibility contract does not identify the browser measurement provider");
+assert(visibility?.consultation?.agent_requests?.status === "not_measured", "Visibility contract does not keep agent requests separate");
 
 const agent = parsed("/agent.json");
 const wellKnownAgent = parsed("/.well-known/agent.json");
