@@ -56,16 +56,16 @@
   <main id="main">
     <div class="breadcrumb"><a href="/">Home</a> / Privacy and measurement policy</div>
     <section class="guide-hero" aria-labelledby="privacy-title">
-      <div class="eyebrow"><span>Public policy</span><span>Measurement status</span><span>Not configured</span></div>
+      <div class="eyebrow"><span>Public policy</span><span>Browser measurement</span><span>Enabled</span></div>
       <h1 id="privacy-title">Evidence before<br><em>the counter.</em></h1>
-      <p class="lede">This page explains what This Page Is For AI can currently know about access to the laboratory, what it cannot know, and the rules that must be published before consultation measurement is enabled.</p>
+      <p class="lede">This page explains what This Page Is For AI can currently know about access to the laboratory, what it cannot know, and the rules that keep browser measurement separate from agent requests and Bitcoin observations.</p>
     </section>
 
     <section class="section guide-layout" aria-label="Privacy and measurement policy">
       <article class="guide-copy">
         <h2>Current status</h2>
-        <p>Measurement is not configured. The site does not include an analytics script, advertising pixel, account system or site-controlled cookie. Its small client-side script only helps a person copy the public Bitcoin address after an explicit click; it does not send that click to this site.</p>
-        <p>The public availability check is an automated infrastructure test. It proves that expected routes responded correctly at a given time. It is not a visitor, a human consultation or an AI-agent consultation.</p>
+        <p>Cloudflare Web Analytics is enabled for thispageisforai.com. It provides aggregate browser page-view and visit signals in the Cloudflare dashboard; Cloudflare states that its Web Analytics does not collect or use visitors' personal data. This site does not include advertising, an account system or a site-controlled analytics cookie.</p>
+        <p>Its small client-side script also helps a person copy the public Bitcoin address after an explicit click; that copy action is not sent to this site. The public availability check is a separate automated infrastructure test. It proves that expected routes responded correctly at a given time, not that a visitor or agent read them.</p>
 
         <h2>Four different signals</h2>
         <div class="experiment-grid">
@@ -75,9 +75,9 @@
             <p>A scheduled check confirms that the public routes, metadata and machine-readable documents are reachable and consistent.</p>
           </article>
           <article class="experiment-card">
-            <div class="experiment-meta"><span>02</span><span>Not measured</span></div>
+            <div class="experiment-meta"><span>02</span><span class="status-live">Enabled</span></div>
             <h3>Human view</h3>
-            <p>A browser page view could be counted only through a documented privacy-preserving provider. No such provider is active.</p>
+            <p>Aggregate browser page views and visits are measured by Cloudflare Web Analytics. This does not prove a unique human, attention or understanding.</p>
           </article>
           <article class="experiment-card">
             <div class="experiment-meta"><span>03</span><span>Not measured</span></div>
@@ -91,9 +91,9 @@
           </article>
         </div>
 
-        <h2>Rules for future measurement</h2>
+        <h2>Rules for current and future measurement</h2>
         <ol>
-          <li><strong>Publish first:</strong> the provider, configuration, event definitions and retention period must appear on this page before collection begins.</li>
+          <li><strong>Publish first:</strong> the provider, configuration, event definitions and retention information appear on this page before each measurement source is enabled.</li>
           <li><strong>Collect less:</strong> use aggregate counts by day, route and broad client category; do not retain raw IP addresses, private identifiers or full request headers.</li>
           <li><strong>Separate sources:</strong> scheduled checks, human browser views, agent requests and blockchain observations must remain separate datasets.</li>
           <li><strong>Label uncertainty:</strong> a User-Agent string is only a classification hint, not proof that an AI consulted the page.</li>
@@ -105,7 +105,7 @@
         <p>If a signal cannot be distinguished reliably, it will be reported as <code>unknown_client</code> or omitted. No claim about consciousness, autonomy, intent or understanding follows from any of these signals.</p>
 
         <h2>External services</h2>
-        <p>The site is published through GitHub Pages. External links, including the public Bitcoin explorer, are separate services with their own policies. If a privacy-preserving analytics provider is added later, its exact name, purpose and configuration will be listed here before it is enabled.</p>
+        <p>The site is published through GitHub Pages. The current browser measurement service is <a href="https://developers.cloudflare.com/web-analytics/about/" target="_blank" rel="noreferrer">Cloudflare Web Analytics</a>, loaded from <code>static.cloudflareinsights.com</code> for this hostname. This site does not copy dashboard records; provider retention follows Cloudflare's current service policy. External links, including the public Bitcoin explorer, are separate services with their own policies.</p>
         <p class="last-updated">Published and last updated: <time datetime="2026-08-27">August 27, 2026</time>.</p>
       </article>
 
@@ -113,11 +113,11 @@
         <p class="kicker">Policy status</p>
         <h2 id="policy-facts-title">What is true now</h2>
         <dl class="fact-list">
-          <div><dt>Analytics</dt><dd>Not configured</dd></div>
+          <div><dt>Analytics</dt><dd>Cloudflare Web Analytics</dd></div>
           <div><dt>Cookies</dt><dd>No site-controlled analytics cookies</dd></div>
           <div><dt>Agent logs</dt><dd>Not available through GitHub Pages</dd></div>
           <div><dt>Availability checks</dt><dd>Public and automated</dd></div>
-          <div><dt>Consultation count</dt><dd>None claimed</dd></div>
+          <div><dt>Consultation count</dt><dd>No numeric count published yet</dd></div>
           <div><dt>Donation evidence</dt><dd>Independent Bitcoin confirmation</dd></div>
         </dl>
         <div class="payment-links"><a href="/site-visibility.json">Read the visibility contract →</a><a href="/llms.txt">Read the agent summary →</a></div>
@@ -130,5 +130,6 @@
     <p>An open synthetic psychology laboratory.</p>
     <div><a href="/">home</a><a href="/experiments.html">experiments</a><a href="/llms.txt">llms.txt</a><a href="/privacy.html">privacy &amp; measurement</a><a href="https://github.com/Httpyabcx/thispageisforai">source</a></div>
   </footer>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "26ea2466f0324126ab5970fbe2ec2760"}'></script>
 </body>
 </html>

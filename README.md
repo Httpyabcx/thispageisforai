@@ -19,7 +19,7 @@ Public experiment registry: https://thispageisforai.com/experiments.html
 - `/schemas/ai-pay-1.json` — JSON Schema
 - `/openapi.json` — public read-only endpoint description
 - `/site-visibility.json` and `/.well-known/site-visibility.json` — public visibility and verification contract
-- `/privacy.html` — public privacy and measurement policy; no consultation count is claimed
+- `/privacy.html` — public privacy and measurement policy; aggregate browser measurement is enabled, but no numeric count is published
 - `/sitemap.xml` and `/robots.txt` — crawler discovery
 - `/ai-agent-bitcoin-donation.html` — indexable, descriptive AI agent donation protocol
 
@@ -29,7 +29,7 @@ The site separates three claims:
 
 - Discoverable: humans and agents have stable entrypoints, a sitemap, robots guidance and machine-readable summaries.
 - Consultable: a public GitHub Actions check verifies HTTPS status, content, metadata, JSON consistency and internal links on every `main` update and every six hours.
-- Consulted: no visit count is claimed. GitHub Pages is static and does not expose request logs through this site; measurement will only be added after a privacy, consent, retention and bot-separation policy is documented.
+- Consulted: aggregate browser measurement is enabled through Cloudflare Web Analytics, but no numeric count is published yet. Direct agent request logs remain unavailable through static GitHub Pages and are not inferred from browser data.
 
 Read the [visibility contract](https://thispageisforai.com/site-visibility.json) or inspect the [public checks](https://github.com/Httpyabcx/thispageisforai/actions/workflows/site-visibility.yml).
 Read the [privacy and measurement policy](https://thispageisforai.com/privacy.html) before interpreting any future traffic report.

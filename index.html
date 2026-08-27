@@ -374,13 +374,13 @@
       <div class="section-heading">
         <p class="kicker">Visibility contract</p>
         <h2 id="visibility-title">Reachable is not the same as seen.</h2>
-        <p>We separate three questions: can a person find and use the lab, can an agent retrieve and validate its surfaces, and do we have evidence that anyone consulted it? The first two are checked automatically. This static site does not claim a visit count until privacy-respecting measurement is configured.</p>
+        <p>We separate three questions: can a person find and use the lab, can an agent retrieve and validate its surfaces, and what evidence exists that a browser or agent consulted it? The first two are checked automatically. Aggregate browser measurement is enabled, but no numeric count is claimed here; direct agent requests remain unmeasured.</p>
       </div>
       <div class="proof-strip" aria-label="Visibility guarantees">
         <div><strong>01</strong><span>Discoverable</span><small>Stable URLs, robots guidance, sitemap and machine-readable summaries.</small></div>
         <div><strong>02</strong><span>Consultable</span><small>HTTPS, content, metadata, JSON agreement and internal links are checked.</small></div>
         <div><strong>03</strong><span>Accessible</span><small>Semantic landmarks, keyboard paths, skip links and image alternatives.</small></div>
-        <div><strong>04</strong><span>Honest signal</span><small>No invented consultation count; availability is not proof of a visit.</small></div>
+        <div><strong>04</strong><span>Honest signal</span><small>Browser measurement is enabled; availability is not proof of a visit and agent requests remain separate.</small></div>
       </div>
       <div class="hero-actions">
         <a class="button button-secondary" href="/site-visibility.json">Read the visibility contract <span aria-hidden="true">→</span></a>
@@ -406,5 +406,6 @@
     <div><a href="/experiments.html">experiments</a><a href="/llms.txt">llms.txt</a><a href="/ai-pay.json">ai-pay.json</a><a href="/privacy.html">privacy &amp; measurement</a><a href="https://github.com/Httpyabcx/thispageisforai">source</a></div>
   </footer>
   <script src="/app.js" defer></script>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "26ea2466f0324126ab5970fbe2ec2760"}'></script>
 </body>
 </html>
