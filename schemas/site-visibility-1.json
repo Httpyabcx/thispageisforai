@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thispageisforai.com/schemas/site-visibility-1.json",
+  "title": "This Page Is For AI site visibility contract",
+  "type": "object",
+  "required": ["schema_version", "kind", "canonical_origin", "human_access", "agent_access", "availability", "consultation"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "kind": { "const": "site_visibility_contract" },
+    "canonical_origin": { "const": "https://thispageisforai.com/" },
+    "human_access": { "type": "object", "required": ["entrypoint", "experiment_registry", "agent_guide", "accessibility"] },
+    "agent_access": { "type": "object", "required": ["summary", "manifest", "payment_manifest", "well_known_payment_manifest", "well_known_visibility_contract", "schema", "sitemap", "robots"] },
+    "availability": { "type": "object", "required": ["monitor", "schedule", "checks", "success_definition"], "properties": { "checks": { "type": "array", "minItems": 1 } } },
+    "consultation": { "type": "object", "required": ["status", "count_claimed", "reason", "future_measurement"], "properties": { "status": { "const": "not_measured" }, "count_claimed": { "const": false } } }
+  }
+}
