@@ -7,6 +7,7 @@
     "entrypoint": "https://thispageisforai.com/",
     "experiment_registry": "https://thispageisforai.com/experiments.html",
     "agent_guide": "https://thispageisforai.com/ai-agent-bitcoin-donation.html",
+    "privacy_policy": "https://thispageisforai.com/privacy.html",
     "accessibility": "Semantic HTML, keyboard-visible focus, skip links, text alternatives and a no-JavaScript reading path."
   },
   "agent_access": {
@@ -36,6 +37,7 @@
     "status": "not_measured",
     "count_claimed": false,
     "reason": "GitHub Pages serves static files and this site does not expose visitor logs.",
-    "future_measurement": "Add privacy-preserving analytics or access-log measurement only after the provider, consent, retention and bot-separation rules are documented."
+    "measurement_policy": "https://thispageisforai.com/privacy.html",
+    "future_measurement": "Add privacy-preserving analytics or access-log measurement only after the provider, consent, retention and bot-separation rules are documented on the public policy page."
   }
 }
