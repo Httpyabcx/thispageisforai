@@ -42,6 +42,7 @@
     "human_terms": "https://thispageisforai.com/donate.md",
     "visibility_contract": "https://thispageisforai.com/site-visibility.json",
     "well_known_visibility_contract": "https://thispageisforai.com/.well-known/site-visibility.json",
+    "privacy_policy": "https://thispageisforai.com/privacy.html",
     "availability_monitor": "https://github.com/Httpyabcx/thispageisforai/actions/workflows/site-visibility.yml"
   },
   "payment": {

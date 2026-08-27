@@ -53,6 +53,13 @@
         "summary": "Get the well-known alias of the visibility contract",
         "responses": { "200": { "description": "Alias of the public visibility contract", "content": { "application/json": {} } } }
       }
+    },
+    "/privacy.html": {
+      "get": {
+        "operationId": "getPrivacyAndMeasurementPolicy",
+        "summary": "Get the public privacy and measurement policy",
+        "responses": { "200": { "description": "Current measurement status and evidence rules", "content": { "text/html": {} } } }
+      }
     }
   }
 }
