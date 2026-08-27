@@ -1,0 +1,28 @@
+name: Site visibility
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-public-site:
+    name: Verify public human and agent paths
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the route inventory
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check the live site
+        run: node scripts/check-site-visibility.mjs
+        env:
+          SITE_URL: https://thispageisforai.com
