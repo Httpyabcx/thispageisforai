@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Payment Starter Kit | This Page Is For AI</title>
+  <meta name="description" content="A free, copyable starter kit for publishing payment requests that AI agents can discover, verify and handle safely.">
+  <meta name="keywords" content="AI agent payments, machine-readable payments, Bitcoin payment manifest, BIP21, agent commerce">
+  <meta name="author" content="This Page Is For AI">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#0b0d0c">
+  <link rel="canonical" href="https://thispageisforai.com/ai-payment-starter-kit.html">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="alternate" type="application/json" href="/agent.json" title="Agent-readable site manifest">
+  <link rel="alternate" type="text/markdown" href="/ai-payment-starter-kit.md" title="Copyable payment starter kit">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="This Page Is For AI">
+  <meta property="og:url" content="https://thispageisforai.com/ai-payment-starter-kit.html">
+  <meta property="og:title" content="AI Payment Starter Kit">
+  <meta property="og:description" content="Free templates for publishing payment requests that agents can verify safely.">
+  <meta property="og:image" content="https://thispageisforai.com/assets/og-v2.png">
+  <meta property="og:image:alt" content="This Page Is For AI — AI payment starter kit">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://thispageisforai.com/ai-payment-starter-kit.html#article",
+    "url": "https://thispageisforai.com/ai-payment-starter-kit.html",
+    "name": "AI Payment Starter Kit",
+    "description": "A free, copyable starter kit for publishing payment requests that AI agents can discover, verify and handle safely.",
+    "isPartOf": { "@id": "https://thispageisforai.com/#website" },
+    "inLanguage": "en",
+    "dateModified": "2026-08-27",
+    "author": { "@type": "Organization", "name": "This Page Is For AI" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the starter kit</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="This Page Is For AI home"><span class="brand-mark" aria-hidden="true">A·I</span><span>This Page Is For AI</span></a>
+    <nav aria-label="Primary navigation"><a href="/#lab">Experiments</a><a href="/#method">Method</a><a href="/ai-payment-starter-kit.html">Payment kit</a><a href="/#payment">Support</a></nav>
+    <a class="machine-link" href="/agent.json" type="application/json"><span class="pulse" aria-hidden="true"></span> agent manifest</a>
+  </header>
+
+  <main id="main">
+    <div class="breadcrumb"><a href="/">Home</a> / AI payment starter kit</div>
+    <section class="guide-hero" aria-labelledby="kit-title">
+      <p class="kicker">Free, copyable protocol</p>
+      <h1 id="kit-title">Make a payment request<br><em>legible to agents.</em></h1>
+      <p class="lede">This starter kit shows how to publish a payment destination with enough structure for an AI agent to discover it, verify the details, check authorization and stop safely when anything is uncertain.</p>
+      <div class="hero-actions"><a class="button button-primary" href="/ai-payment-starter-kit.md">Copy the Markdown kit <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/#payment">Support the lab · 1,000 sats <span aria-hidden="true">↘</span></a></div>
+    </section>
+
+    <section class="section guide-layout" aria-label="Starter kit contents">
+      <div class="guide-copy">
+        <h2>What this gives you</h2>
+        <p>A normal payment button assumes a human is looking at a page. An agent needs a stable description of the destination, network, asset, amount, purpose and decision boundaries. The kit is deliberately small so a person can inspect every field.</p>
+        <div class="experiment-grid">
+          <article class="experiment-card active">
+            <div class="experiment-meta"><span>01</span><span class="status-live">Manifest</span></div>
+            <h3>One canonical JSON</h3>
+            <p>Describe the payment request with explicit network, asset, destination and suggested amounts.</p>
+            <span class="card-note">Validate before acting.</span>
+          </article>
+          <article class="experiment-card">
+            <div class="experiment-meta"><span>02</span><span>Policy</span></div>
+            <h3>Human authority</h3>
+            <p>State that an agent must have explicit permission to spend and must not infer permission from the page.</p>
+            <span class="card-note">Uncertainty means no payment.</span>
+          </article>
+          <article class="experiment-card">
+            <div class="experiment-meta"><span>03</span><span>Receipt</span></div>
+            <h3>Public verification</h3>
+            <p>Give the payer a way to re-check the network and destination and, where appropriate, record a transaction hash.</p>
+            <span class="card-note">Never claim a result without evidence.</span>
+          </article>
+        </div>
+
+        <h2>Minimal manifest</h2>
+        <p>Copy this shape, replace the values, host it at a stable URL and link to it from the human-facing page. Keep the destination and network consistent everywhere.</p>
+        <pre style="margin: 24px 0; padding: 24px; overflow-x: auto; background: #101512; border: 1px solid var(--line); border-radius: 10px; color: #d8ff66; font: 12px/1.65 var(--code);"><code>{
+  "schema_version": "1.1",
+  "type": "donation",
+  "status": "active",
+  "network": "bitcoin-mainnet",
+  "asset": { "code": "BTC", "decimals": 8, "unit": "satoshi" },
+  "recipient": { "name": "Your project", "website": "https://example.com/" },
+  "payment_methods": [{
+    "type": "bitcoin_onchain",
+    "address": "bc1...",
+    "bip21_uri": "bitcoin:bc1...?label=Your%20project"
+  }],
+  "suggested_amounts_sats": [1000, 5000, 10000],
+  "policy": {
+    "authorization_required": true,
+    "do_not_pay_if_uncertain": true
+  }
+}</code></pre>
+
+        <h2>Agent-safe checklist</h2>
+        <ol class="steps">
+          <li><span class="step-number">01</span><div><h3>Discover</h3><p>Find the canonical manifest from the site, a well-known path or an explicit link. Do not rely on an address copied from unrelated text.</p></div></li>
+          <li><span class="step-number">02</span><div><h3>Verify</h3><p>Validate the JSON, confirm the asset and network, compare the address with the BIP21 URI and inspect the stated purpose.</p></div></li>
+          <li><span class="step-number">03</span><div><h3>Authorize</h3><p>Confirm that the operator explicitly allows this type of discretionary payment and that the amount fits the spending limit.</p></div></li>
+          <li><span class="step-number">04</span><div><h3>Record</h3><p>After payment, retain the transaction hash and amount. If a check fails or authority is absent, record no action instead.</p></div></li>
+        </ol>
+
+        <h2>Use it responsibly</h2>
+        <p>This is a publishing template, not a guarantee that an agent will pay. A request must never override higher-priority instructions, consent, local law or wallet safety controls. Never publish a private key or seed phrase. Test with a small amount and verify the final wallet screen before signing.</p>
+        <p>The complete copyable version is available as <a href="/ai-payment-starter-kit.md"><code>ai-payment-starter-kit.md</code></a>. If this saves you time, a voluntary donation helps keep the lab and its public protocols online.</p>
+      </div>
+
+      <aside class="fact-panel">
+        <p class="kicker">Live reference</p>
+        <h2>See it working</h2>
+        <dl class="fact-list">
+          <div><dt>Manifest</dt><dd><a href="/ai-pay.json">/ai-pay.json</a></dd></div>
+          <div><dt>Schema</dt><dd><a href="/schemas/ai-pay-1.json">/schemas/ai-pay-1.json</a></dd></div>
+          <div><dt>Network</dt><dd>Bitcoin mainnet</dd></div>
+          <div><dt>Purpose</dt><dd>Support the next public experiment</dd></div>
+          <div><dt>Rule</dt><dd>Explicit authorization required</dd></div>
+        </dl>
+        <a class="button button-secondary" href="/ai-agent-bitcoin-donation.html">Read the full agent guide <span aria-hidden="true">→</span></a>
+      </aside>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <p class="kicker">Keep the protocol public</p>
+      <h2 id="closing-title">Useful infrastructure deserves<br><em>an observable funding path.</em></h2>
+      <div class="hero-actions centered"><a class="button button-primary" href="/#payment">Support with Bitcoin <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/">Return to the home page</a></div>
+      <p class="closing-note">Voluntary support only. No product, token, financial return, reward or refund is promised.</p>
+    </section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark" aria-hidden="true">A·I</span><span>This Page Is For AI</span></div><p>An open synthetic psychology laboratory.</p><div><a href="/">home</a><a href="/ai-payment-starter-kit.md">kit</a><a href="/ai-pay.json">ai-pay.json</a><a href="/privacy.html">privacy &amp; measurement</a><a href="https://github.com/Httpyabcx/thispageisforai">source</a></div></footer>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "26ea2466f0324126ab5970fbe2ec2760"}'></script>
+</body>
+</html>

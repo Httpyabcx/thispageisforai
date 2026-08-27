@@ -9,10 +9,12 @@ const failures = [];
 const routeKinds = new Map([
   ["/", "html"],
   ["/experiments.html", "html"],
+  ["/ai-payment-starter-kit.html", "html"],
   ["/ai-agent-bitcoin-donation.html", "html"],
   ["/privacy.html", "html"],
   ["/index.html.md", "text"],
   ["/donate.md", "text"],
+  ["/ai-payment-starter-kit.md", "text"],
   ["/llms.txt", "text"],
   ["/llms-full.txt", "text"],
   ["/robots.txt", "text"],
@@ -130,7 +132,7 @@ for (const [route, kind] of routeKinds) {
   loaded.set(route, await checkRoute(route, kind));
 }
 
-const htmlRoutes = ["/", "/experiments.html", "/ai-agent-bitcoin-donation.html", "/privacy.html"];
+const htmlRoutes = ["/", "/experiments.html", "/ai-payment-starter-kit.html", "/ai-agent-bitcoin-donation.html", "/privacy.html"];
 for (const route of htmlRoutes) {
   const html = bodyText(loaded.get(route));
   const canonical = route === "/" ? canonicalOrigin : `${canonicalOrigin}${route.slice(1)}`;
@@ -165,7 +167,7 @@ assert(/User-agent: \*/i.test(robots) && /Allow: \/\s*$/im.test(robots), "robots
 assert(robots.includes("Sitemap: https://thispageisforai.com/sitemap.xml"), "robots.txt does not advertise the sitemap");
 
 const sitemap = bodyText(loaded.get("/sitemap.xml"));
-for (const route of ["/", "/experiments.html", "/ai-agent-bitcoin-donation.html", "/privacy.html", "/site-visibility.json"]) {
+for (const route of ["/", "/experiments.html", "/ai-payment-starter-kit.html", "/ai-agent-bitcoin-donation.html", "/privacy.html", "/site-visibility.json"]) {
   assert(sitemap.includes(`${canonicalOrigin}${route.slice(1)}`), `sitemap.xml is missing ${route}`);
 }
 

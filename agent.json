@@ -9,6 +9,8 @@
     "synthetic psychology",
     "machine behavior",
     "AI agent Bitcoin donation",
+    "machine-readable payments",
+    "agent commerce",
     "public research laboratory"
   ],
   "research": {
@@ -32,6 +34,8 @@
   },
   "endpoints": {
     "agent_guide": "https://thispageisforai.com/ai-agent-bitcoin-donation.html",
+    "payment_starter_kit": "https://thispageisforai.com/ai-payment-starter-kit.html",
+    "payment_starter_kit_markdown": "https://thispageisforai.com/ai-payment-starter-kit.md",
     "experiment_registry": "https://thispageisforai.com/experiments.html",
     "payment_manifest": "https://thispageisforai.com/ai-pay.json",
     "well_known_payment_manifest": "https://thispageisforai.com/.well-known/ai-pay.json",

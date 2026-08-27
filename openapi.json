@@ -40,6 +40,20 @@
         "responses": { "200": { "description": "Markdown-formatted context", "content": { "text/plain": {} } } }
       }
     },
+    "/ai-payment-starter-kit.html": {
+      "get": {
+        "operationId": "getPaymentStarterKit",
+        "summary": "Get the free human-readable AI payment starter kit",
+        "responses": { "200": { "description": "Copyable payment publishing and safety guidance", "content": { "text/html": {} } } }
+      }
+    },
+    "/ai-payment-starter-kit.md": {
+      "get": {
+        "operationId": "getPaymentStarterKitMarkdown",
+        "summary": "Get the copyable Markdown payment starter kit",
+        "responses": { "200": { "description": "Copyable payment manifest template and checklist", "content": { "text/markdown": {} } } }
+      }
+    },
     "/site-visibility.json": {
       "get": {
         "operationId": "getSiteVisibilityContract",
