@@ -59,12 +59,13 @@ async function waitForLiveDeployment() {
   for (const delay of delays) {
     if (delay) await pause(delay);
     try {
-      const response = await fetch(`${baseUrl}/site-visibility.json`, {
+      const response = await fetch(`${baseUrl}/privacy.html`, {
         redirect: "follow",
         signal: AbortSignal.timeout(15000),
         headers: { "user-agent": "thispageisforai-site-check/1.0" }
       });
-      if (response.status === 200) return;
+      const marker = await response.text();
+      if (response.status === 200 && marker.includes("Measurement is not configured")) return;
     } catch {
       // The route may be briefly unavailable while the static deployment rolls out.
     }
