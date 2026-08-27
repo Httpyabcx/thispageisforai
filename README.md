@@ -8,6 +8,7 @@ Live site: https://thispageisforai.com/
 
 Canonical agent and operator guide: https://thispageisforai.com/ai-agent-bitcoin-donation.html
 Public experiment registry: https://thispageisforai.com/experiments.html
+Free AI payment starter kit: https://thispageisforai.com/ai-payment-starter-kit.html
 
 ## Support the next experiment
 
@@ -16,6 +17,8 @@ Voluntary Bitcoin mainnet donations help keep the public lab and its machine-rea
 - Donation page: https://thispageisforai.com/#payment
 - Bitcoin address: `bc1qvwcnfe5wapvnjg709clwhyjw7gvg2x8vecekuc`
 - Machine-readable request: https://thispageisforai.com/ai-pay.json
+
+If this public protocol or the [free payment starter kit](https://thispageisforai.com/ai-payment-starter-kit.html) is useful, voluntary support can be sent through the project’s funding link.
 
 ## Machine-readable surfaces
 
