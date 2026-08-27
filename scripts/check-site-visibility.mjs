@@ -10,6 +10,7 @@ const routeKinds = new Map([
   ["/", "html"],
   ["/experiments.html", "html"],
   ["/ai-agent-bitcoin-donation.html", "html"],
+  ["/privacy.html", "html"],
   ["/index.html.md", "text"],
   ["/donate.md", "text"],
   ["/llms.txt", "text"],
@@ -128,7 +129,7 @@ for (const [route, kind] of routeKinds) {
   loaded.set(route, await checkRoute(route, kind));
 }
 
-const htmlRoutes = ["/", "/experiments.html", "/ai-agent-bitcoin-donation.html"];
+const htmlRoutes = ["/", "/experiments.html", "/ai-agent-bitcoin-donation.html", "/privacy.html"];
 for (const route of htmlRoutes) {
   const html = bodyText(loaded.get(route));
   const canonical = route === "/" ? canonicalOrigin : `${canonicalOrigin}${route.slice(1)}`;
@@ -148,13 +149,18 @@ const homepage = bodyText(loaded.get("/"));
 assert(homepage.includes("We build the test."), "Homepage is missing the primary human-readable thesis");
 assert(homepage.includes("Every important fact has a stable URL."), "Homepage is missing the stable URL explanation");
 assert(homepage.includes("site-visibility.json"), "Homepage does not expose the visibility contract");
+assert(homepage.includes("privacy.html"), "Homepage does not expose the privacy and measurement policy");
+
+const privacy = bodyText(loaded.get("/privacy.html"));
+assert(privacy.includes("Measurement is not configured"), "Privacy page does not state the current measurement status");
+assert(privacy.includes("availability check"), "Privacy page does not distinguish availability from consultation");
 
 const robots = bodyText(loaded.get("/robots.txt"));
 assert(/User-agent: \*/i.test(robots) && /Allow: \/\s*$/im.test(robots), "robots.txt does not allow the public site");
 assert(robots.includes("Sitemap: https://thispageisforai.com/sitemap.xml"), "robots.txt does not advertise the sitemap");
 
 const sitemap = bodyText(loaded.get("/sitemap.xml"));
-for (const route of ["/", "/experiments.html", "/ai-agent-bitcoin-donation.html", "/site-visibility.json"]) {
+for (const route of ["/", "/experiments.html", "/ai-agent-bitcoin-donation.html", "/privacy.html", "/site-visibility.json"]) {
   assert(sitemap.includes(`${canonicalOrigin}${route.slice(1)}`), `sitemap.xml is missing ${route}`);
 }
 
@@ -181,7 +187,7 @@ assert(visibility?.consultation?.status === "not_measured" && visibility?.consul
 const agent = parsed("/agent.json");
 const wellKnownAgent = parsed("/.well-known/agent.json");
 assert(JSON.stringify(agent) === JSON.stringify(wellKnownAgent), "Agent manifests are not synchronized");
-for (const endpoint of ["visibility_contract", "well_known_visibility_contract"]) {
+for (const endpoint of ["visibility_contract", "well_known_visibility_contract", "privacy_policy"]) {
   assert(typeof agent?.endpoints?.[endpoint] === "string", `agent.json is missing ${endpoint}`);
 }
 
